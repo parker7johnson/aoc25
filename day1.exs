@@ -1,6 +1,5 @@
 # Day 1 - Advent of Code 2025
 
-# Read input file
 content =
   case File.read("input2") do
     {:ok, file} ->
@@ -10,7 +9,6 @@ content =
       raise "No file found"
   end
 
-# Shared parser module
 defmodule Parser do
   def parse(content) do
     Enum.map(content, fn c ->
@@ -21,7 +19,6 @@ defmodule Parser do
   end
 end
 
-# Part 1 Solution
 defmodule Part1 do
   def solve(instructions, count \\ 0, start \\ 50)
 
@@ -52,7 +49,6 @@ defmodule Part1 do
   def solve([], count, _), do: count
 end
 
-# Part 2 Solution
 defmodule Part2 do
   def solve(instructions, count \\ 0, start \\ 50)
 
